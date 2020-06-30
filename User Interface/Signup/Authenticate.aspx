@@ -42,10 +42,10 @@
 				</div>
 
 				<div>
-					<asp:Label runat="server" ID="otp"></asp:Label>
+					<asp:Label runat="server" ID="otp" Font-Italic="True" Font-Names="Georgia" ForeColor="Red"></asp:Label>
 				</div>
 
-				<form class="login100-form validate-form" id="form2" runat="server">
+				<form class="login100-form validate-form" id="form2" runat="server" action ="../Login/Login.aspx">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Email otp required">
 						<span class="label-input100">Email otp</span>
 						<asp:TextBox class="input100" type="text" name="username" placeholder="Enter email otp" runat="server" ID="aemail"/>
@@ -58,10 +58,12 @@
 					</div>
 
 					<div>
-					<asp:Label runat="server" ID="everified"></asp:Label>
+					<asp:Label runat="server" ID="everified" Font-Bold="True" Font-Names="Verdana" ForeColor="#009900"></asp:Label>
 				</div>
 
-					<div><br /><br /></div>
+					<div>
+						<asp:Label runat="server" ID="enverified" ForeColor="Red"></asp:Label>
+				        <br /><br /></div>
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Mobile otp required">
 						<span class="label-input100">Mobile otp</span>
 						<asp:TextBox class="input100" type="password" name="pass" placeholder="Enter mobile otp" runat="server" ID="amobile"/>
@@ -70,14 +72,25 @@
 
 
 					<div class="container-login100-form-btn">
-						<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Mobile" ID="mauth">
+						<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Mobile" ID="mauth" OnClick="mauth_Click">
 							
 						</asp:Button>
 					</div>
 
 					<div>
-					<asp:Label runat="server" ID="mverified"></asp:Label>
+					<asp:Label runat="server" ID="mverified" Font-Bold="True" Font-Names="Verdana" ForeColor="#009900"></asp:Label>
+				        <br />
+						<asp:Label runat="server" ID="mnverified" ForeColor="Red"></asp:Label>
 				</div>
+
+					<div>
+						<br />
+						<br />
+						<br />
+						<asp:Button class="login100-form-btn" runat="server" ForeColor="#CC00CC" Text="Return to Login" ID="push" OnClick="pushdata">
+								
+							</asp:Button>
+						</div>
 				</form>
 			</div>
 		</div>

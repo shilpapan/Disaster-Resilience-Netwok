@@ -12,41 +12,63 @@ namespace DRSN.User_Interface.Signup
     public partial class Authenticate : System.Web.UI.Page
     {
         Common.Signup signup = new Common.Signup();
+        Business_Application.accountcreate accountcreate = new Business_Application.accountcreate();
+        public bool statuse = false;
+        public bool statusm = false;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            otp.Text = "A verification code has been sent to your email id" + signup.email + "and" +
+            otp.Text = "A verification code has been sent to your email id " + signup.email + " and " +
                 "" +
-                " your mobile number" + signup.mobile + ". Please enter them below";
+                " your mobile number " + signup.mobile + " . Please enter them below. ";
 
         }
 
         protected void eauth_Click(object sender, EventArgs e)
         {
-            //String conn =
-            //String query = "insert into emaildetails(name, address, status, code) values('" + name + "','" + email + "','Unverified','" + activationcode + "')";
-            //SqlConnection con = new SqlConnection(conn);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = query;
-            //cmd.Connection = con;
-            //SqlDataAdapter da = new SqlDataAdapter();
-            //da.SelectCommand = cmd;
-            //DataSet ds = new DataSet();
-            //da.Fill(ds);
-            //if(ds.Tables[0].Rows.Count>0)
-            //{
-            //    String activationcode;
-            //    activationcode = ds.Tables[0].Rows[0]["activationcode"].ToString();
-            //    if(activationcode == signup.emailverificationcode)
-            //    {
-            //        changestatus();
-            //        everified.Text = "Email has been authenticated";
-            //    }
-            //    else
-            //    {
-            //        everified.Text = "The otp you have entered is invalid. Please try again";
-            //    }
-            //}
-            //con.Close();
+            if (signup.emailverificationcode == aemail.Text)
+            {
+                everified.Text = "Email Authenticated";
+                statuse = true;
+            }
+            else
+            {
+                enverified.Text = "Invalid code";
+                statuse = false;
+            }
+        }
+
+        protected void mauth_Click(object sender, EventArgs e)
+        {
+            
+
+            if (amobile.Text == Session["otp"].ToString())
+            {
+                
+                mverified.Text = "Your Mobile Number Has Been Verified Successfully - Thanks";
+                statusm = true;
+            }
+            else
+            {
+                mverified.Text = "Invalid Otp. Please enter correct otp.";
+                statusm = false;
+                
+            }
+        }
+
+        protected void pushdata(object sender, EventArgs e)
+        {
+            if(statuse = statusm)
+            {
+                signup.emailstatus = "Authenticated";
+                signup.mobilestatus = "Authenticated";
+            }
+            else
+            {
+                signup.emailstatus = "Not Authenticated";
+                signup.mobilestatus = "Not Authenticated";
+            }
         }
     }
 }

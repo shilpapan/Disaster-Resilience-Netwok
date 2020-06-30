@@ -1,7 +1,4 @@
-applications:
-- name: DRSN
-  memory: 256M
-  
-  random-route: true
-  services:
-  - mydatabase
+ applications:
+ - name: DRSN
+   random-route: true
+   memory: 128M

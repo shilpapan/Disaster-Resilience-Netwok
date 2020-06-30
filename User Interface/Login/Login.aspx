@@ -68,7 +68,7 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="../Signup/Signup.aspx">
+						<a class="txt1" href="../Signup/adduser.aspx">
 							Don't have an account yet? Sign up here -->
 						</a>
 					</div>

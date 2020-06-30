@@ -11,7 +11,7 @@ namespace DRSN.User_Interface.Signup
 {
 
 
-    public partial class Signup
+    public partial class adduser
     {
 
         /// <summary>
@@ -51,6 +51,24 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.TextBox mobile;
 
         /// <summary>
+        /// mob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mob;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
         /// password control.
         /// </summary>
         /// <remarks>
@@ -69,21 +87,39 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.TextBox confirmpassword;
 
         /// <summary>
+        /// matchpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label matchpassword;
+
+        /// <summary>
+        /// comparePasswords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator comparePasswords;
+
+        /// <summary>
         /// ckb1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ckb1;
+        protected global::System.Web.UI.WebControls.CheckBox ckb1;
 
         /// <summary>
-        /// signu control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button signu;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

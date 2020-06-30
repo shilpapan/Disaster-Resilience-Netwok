@@ -23,9 +23,9 @@ namespace DRSN.Common
             set { Email = value; }
         }
 
-        private int Mobile;
+        private string Mobile;
 
-        public int mobile
+        public string mobile
         {
             get { return Mobile; }
             set { Mobile = value; }
@@ -57,7 +57,7 @@ namespace DRSN.Common
 
         private string Privateaddtess;
 
-        public string Privateaddress
+        public string privateaddress
         {
             get { return Privateaddtess; }
             set { Privateaddtess = value; }
@@ -79,6 +79,36 @@ namespace DRSN.Common
             set { Mobileverificationcode = value; }
         }
 
+        private string Emailstatus;
+
+        public string emailstatus
+        {
+            get { return Emailstatus; }
+            set { Emailstatus = value; }
+        }
+
+        private string Mobilestatus;
+
+        public string mobilestatus
+        {
+            get { return Mobilestatus; }
+            set { Mobilestatus = value; }
+        }
+
+        public virtual void userdetails(string name,string email, string mobile, string password, string accointid, string publicaddress,
+            string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
+        {
+            this.Fullname = name;
+            this.Email = email;
+            this.Mobile = mobile;
+            this.Password = password;
+            this.Accountid = accointid;
+            this.Publicaddress = publicaddress;
+            this.Privateaddtess = privateaddress;
+            this.Emailverificationcode = emailverificationcode;
+            this.Emailstatus = emailstatus;
+            this.Mobilestatus = mobilestatus;
+        }
     }
 
 }

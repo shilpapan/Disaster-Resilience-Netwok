@@ -81,7 +81,7 @@
                     <h1>Better Solutions For Your Business</h1>
                     <h2>We are team of talanted designers making websites with Bootstrap</h2>
                     <div class="d-lg-flex">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <a href="Signup/adduser.aspx" class="btn-get-started scrollto">Sign up for free</a>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
                     </div>
                 </div>

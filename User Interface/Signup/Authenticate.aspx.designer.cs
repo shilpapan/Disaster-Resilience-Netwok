@@ -60,6 +60,15 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.Label everified;
 
         /// <summary>
+        /// enverified control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label enverified;
+
+        /// <summary>
         /// amobile control.
         /// </summary>
         /// <remarks>
@@ -85,5 +94,23 @@ namespace DRSN.User_Interface.Signup
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mverified;
+
+        /// <summary>
+        /// mnverified control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mnverified;
+
+        /// <summary>
+        /// push control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button push;
     }
 }
