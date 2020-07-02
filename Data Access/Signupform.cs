@@ -5,16 +5,22 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 using DRSN.Business_Application;
+using DRSN.User_Interface.Signup;
+using DRSN.Common;
 
 namespace DRSN.Data_Access
 {
     public class Signupform : accountcreate
     {
         Common.Signup signup = new Common.Signup();
-       public void parametersinsert()
+        public void parametersinsert(string em)
         {
-            String connection = ConfigurationManager.ConnectionStrings["DRSN"].ConnectionString;
+            String connection = ConfigurationManager.ConnectionStrings["DRSNdatabase"].ConnectionString;
             SqlConnection sqlcon = new SqlConnection(connection);
+            User_Interface.Signup.adduser ad = new adduser();
+
+            verifyemail(em);
+            createaddress(out string publickey, out string privatekey);
 
             try
             {
@@ -41,7 +47,10 @@ namespace DRSN.Data_Access
             }
             sqlcon.Close();
         }
-
-    
+        User_Interface.Signup.Authenticate au = new Authenticate();
+        public override void userdetails(string name, string email, string mobile, string password, string accointid, string publicaddress, string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
+        {
+            au.userdata();
+        }
     }
 }

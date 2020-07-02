@@ -40,7 +40,7 @@
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form id="form2" runat="server">
+				<form id="form1" runat="server">
 					<span class="login100-form-title p-b-59">
 						Sign Up
 					</span>
@@ -70,6 +70,9 @@
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
 						<asp:TextBox class="input100" type="password" name="password" id="password" placeholder="*************" runat="server" OnTextChanged="password_TextChanged"/>
+						<asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+							ErrorMessage="Your password must contain atleast 8 characters, 1 lowercase, 1 uppercase, 1 symbol and 1 digit" 
+							ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$" ControlToValidate="password" ForeColor="Red"></asp:RegularExpressionValidator>
 						<span class="focus-input100"></span>
 					</div>
 

@@ -45,16 +45,17 @@
 					<asp:Label runat="server" ID="otp" Font-Italic="True" Font-Names="Georgia" ForeColor="Red"></asp:Label>
 				</div>
 
-				<form class="login100-form validate-form" id="form2" runat="server" action ="../Login/Login.aspx">
+				<form id="form2" runat="server">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Email otp required">
 						<span class="label-input100">Email otp</span>
 						<asp:TextBox class="input100" type="text" name="username" placeholder="Enter email otp" runat="server" ID="aemail"/>
 						<span class="focus-input100"></span>
 					</div>
 					<div class="container-login100-form-btn">
-						<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Email" ID="eauth" OnClick="eauth_Click">
+						<%--<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Email" ID="eauth" OnClick="eauth_Click">
 							
-						</asp:Button>
+						</asp:Button>--%>
+					    <asp:Button ID="Button1" runat="server" Text="Authenticate Email" class="login100-form-btn" Height="22px" OnClick="Button1_Click" Width="178px" />
 					</div>
 
 					<div>
@@ -72,9 +73,10 @@
 
 
 					<div class="container-login100-form-btn">
-						<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Mobile" ID="mauth" OnClick="mauth_Click">
+						<%--<asp:Button class="login100-form-btn" runat="server" Text="Authenticate Mobile" ID="mauth" OnClick="mauth_Click">
 							
-						</asp:Button>
+						</asp:Button>--%>
+					    <asp:Button ID="Button2" runat="server" Text="Authenticate Mobile"  class="login100-form-btn" Height="22px" OnClick="Button2_Click" Width="181px"/>
 					</div>
 
 					<div>
@@ -87,9 +89,12 @@
 						<br />
 						<br />
 						<br />
-						<asp:Button class="login100-form-btn" runat="server" ForeColor="#CC00CC" Text="Return to Login" ID="push" OnClick="pushdata">
+						<%--<asp:Button class="login100-form-btn" runat="server" ForeColor="#CC00CC" Text="Return to Login" ID="push" OnClick="pushdata">
 								
-							</asp:Button>
+							</asp:Button>--%>
+
+						<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Submit" class="login100-form-btn" />
+
 						</div>
 				</form>
 			</div>

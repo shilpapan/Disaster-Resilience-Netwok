@@ -15,37 +15,47 @@ using QBitNinja.Client;
 using QBitNinja.Client.Models;
 using DRSN.Common;
 using DRSN.User_Interface.Signup;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DRSN.Business_Application 
 {
     public class accountcreate:Signup
     {
+        //User_Interface.Signup.Authenticate au = new Authenticate();
+        //public override void userdetails(string name, string email, string mobile, string password, string accointid, string publicaddress, string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
+        //{
+        //    au.userdata();
+        //    //name = HttpContext.Current.Session["name"].ToString();
+        //    //email = HttpContext.Current.Session["email"].ToString();
+        //    //mobile = HttpContext.Current.Session["mobile"].ToString();
+        //    //password = HttpContext.Current.Session["password"].ToString();
+        //    //accointid = HttpContext.Current.Session["accountid"].ToString();
+        //    //publicaddress = HttpContext.Current.Session["publickey"].ToString();
+        //    //privateaddress = HttpContext.Current.Session["privkey"].ToString();
+        //    //emailstatus = HttpContext.Current.Session["status"].ToString();
+        //    //mobilestatus = HttpContext.Current.Session["status"].ToString();
+        //}
 
-        public override void userdetails(string name, string email, string mobile, string password, string accointid, string publicaddress, string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
-        {
-            base.userdetails(name, email, mobile, password, accointid, publicaddress, privateaddress, emailverificationcode, mobileverificationcode, emailstatus, mobilestatus);
-
-
-
-        }
-
-
-
-        static String activationcode;
+        public String activationcode;
         Common.Signup signup = new Common.Signup();
         public void verifyemail(string email)
         {
-            
-                Random random = new Random();
-                activationcode = random.Next(100001, 999999).ToString();
-                signup.emailverificationcode = activationcode;
-                
-                sendcode(email);
-           
+
+            Random random = new Random();
+            activationcode = random.Next(100001, 999999).ToString();
+            signup.emailverificationcode = activationcode;
+            //adduser ad = new adduser();
+            //ad.emailc = activationcode;
+
+            HttpContext.Current.Session["emailcode"] = activationcode;
+            sendcode(email);
+
+            //MssGenerateMnemo(out string ssMnemo);
         }
 
-        private void sendcode(string email)
+        public void sendcode(string email)
         {
+            Signup s = new Signup();
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
@@ -53,8 +63,8 @@ namespace DRSN.Business_Application
             smtp.EnableSsl = true;
             MailMessage msg = new MailMessage();
             msg.Subject = "Authenticate your email with DRSN";
-            msg.Body = "Hi " + signup.name + ", \n\nThe authentication code for your email id is " + signup.emailverificationcode + "\n\nYour user id is: " + signup.accointid +
-                "Please use this id as userid when you login. \n\n\nRegards\nDRSN Team";
+            msg.Body = "Hi " + signup.name + ", \n\nThe authentication code for your email id is " + signup.emailverificationcode + 
+                 "\n\n\nRegards\nDRSN Team";
             string toaddress = email;
             msg.To.Add(toaddress);
             string fromaddress = "DRSN Team <shilpapan0301@gmail.com>";
@@ -71,48 +81,17 @@ namespace DRSN.Business_Application
             }
         }
 
-        static void createaddress()
+        public void createaddress(out string publickey, out string privatekey)
         {
-
+            Key privateKey = new Key(); // generate a random private key
+            PubKey publicKey = privateKey.PubKey;
+            //Console.WriteLine(publicKey); // 0251036303164f6c458e9f7abecb4e55e5ce9ec2b2f1d06d633c9653a07976560c
+            publickey = publicKey.ToString();
+            privatekey = privateKey.ToString();
+            HttpContext.Current.Session["publickey"] = publicKey.ToString();
+            HttpContext.Current.Session["privkey"] = privatekey.ToString();
         }
 
-        public void MssGenerateMnemo(out string ssMnemo)
-        {
-
-            Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
-
-            ssMnemo = mnemonic.ToString();
-
-        }
-
-        public void MssGenerateAddress(
-    string ssMnemo,
-    int ssKeynumber,
-    bool ssIsTestNet,
-    out string ssAddress,
-    out string ssPrivateKey)
-        {
-
-            Network net;
-            if (ssIsTestNet)
-                net = Network.TestNet;
-            else
-                net = Network.Main;
-
-            Mnemonic restoreNnemo = new Mnemonic(ssMnemo);
-
-            ExtKey masterKey = restoreNnemo.DeriveExtKey();
-
-            KeyPath keypth = new KeyPath("m/44'/0'/0'/0/" + ssKeynumber);
-            ExtKey key = masterKey.Derive(keypth);
-
-            ssAddress = key.PrivateKey.PubKey.GetAddress(net).ToString();
-            ssPrivateKey = key.PrivateKey.GetBitcoinSecret(net).ToString();
-
-            signup.publicaddress = ssAddress;
-            signup.privateaddress = ssPrivateKey;
-
-        }
 
 
     }

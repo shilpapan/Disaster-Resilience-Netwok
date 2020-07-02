@@ -16,21 +16,38 @@ namespace DRSN.User_Interface.Signup
         public bool statuse = false;
         public bool statusm = false;
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            otp.Text = "A verification code has been sent to your email id " + signup.email + " and " +
+
+            otp.Text = "A verification code has been sent to your email id " + Session["email"] as String + " and " +
                 "" +
-                " your mobile number " + signup.mobile + " . Please enter them below. ";
+                " your mobile number " + Session["mobile"] as String + " . Please enter them below. ";
 
         }
 
-        protected void eauth_Click(object sender, EventArgs e)
+        Common.Signup s = new Common.Signup();
+        public void userdata()
         {
-            if (signup.emailverificationcode == aemail.Text)
+            Session["name"] = s.name;
+            Session["email"] = s.email ;
+            Session["mobile"] = s.mobile;
+            Session["password"] = s.password;
+            Session["accountid"] = s.accointid;
+            Session["otp"] = s.mobileverificationcode;
+            Session["emailcode"] = s.emailverificationcode;
+            Session["publickey"] = s.publicaddress;
+            Session["privkey"] = s.privateaddress;
+            Session["status"] = s.mobilestatus;
+            Session["status"] = s.emailstatus;
+         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (aemail.Text == Session["emailcode"].ToString())
             {
                 everified.Text = "Email Authenticated";
                 statuse = true;
+                //Session["estatus"] = 
             }
             else
             {
@@ -39,36 +56,38 @@ namespace DRSN.User_Interface.Signup
             }
         }
 
-        protected void mauth_Click(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            
 
-            if (amobile.Text == Session["otp"].ToString())
-            {
-                
-                mverified.Text = "Your Mobile Number Has Been Verified Successfully - Thanks";
-                statusm = true;
-            }
-            else
-            {
-                mverified.Text = "Invalid Otp. Please enter correct otp.";
-                statusm = false;
-                
-            }
+                if (amobile.Text == Session["otp"].ToString())
+                {
+
+                    mverified.Text = "Your Mobile Number Has Been Verified Successfully - Thanks";
+                    statusm = true;
+                }
+                else
+                {
+                    mverified.Text = "Invalid Otp. Please enter correct otp.";
+                    statusm = false;
+
+                }
+            
         }
 
-        protected void pushdata(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
-            if(statuse = statusm)
+            if (statuse == statusm)
             {
-                signup.emailstatus = "Authenticated";
-                signup.mobilestatus = "Authenticated";
+                Session["status"] = "Authenticated";
+
+                Response.Redirect("../Login/Login.aspx");
             }
             else
             {
-                signup.emailstatus = "Not Authenticated";
-                signup.mobilestatus = "Not Authenticated";
+                Session["status"] = "Not Authenticated";
+                Response.Redirect("adduser.aspx");
             }
+
         }
     }
 }

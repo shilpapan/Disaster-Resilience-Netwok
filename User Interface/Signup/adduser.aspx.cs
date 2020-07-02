@@ -10,14 +10,15 @@ using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
 using DRSN.Common;
-
+using DRSN.Data_Access;
 
 namespace DRSN.User_Interface.Signup
 {
     public partial class adduser : System.Web.UI.Page 
     {
 
-
+        Common.Signup sign = new Common.Signup();
+        public string emailc = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,12 +26,6 @@ namespace DRSN.User_Interface.Signup
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
             Common.Signup common = new Common.Signup();
             string name1 = name.Text;
             common.name = name1;
@@ -38,17 +33,14 @@ namespace DRSN.User_Interface.Signup
             common.mobile = mobile.Text;
             common.password = password.Text;
 
-
-
             string NewGUID = System.Guid.NewGuid().ToString();
             common.accointid = NewGUID;
-
 
             Random random = new Random();
             int value = random.Next(100001, 999999);
             string destinationaddr = "91" + common.mobile;
-            string message = "Your OTP Number is " + value + " ( Sent By : Hariti Study Hub )";
-            //Label3.Text = message;
+            string message = "Your OTP Number is " + value + " ( Sent By : DRSN Team )";
+            
             String message1 = HttpUtility.UrlEncode(message);
 
             using (var wb = new WebClient())
@@ -63,25 +55,25 @@ namespace DRSN.User_Interface.Signup
                 string result = System.Text.Encoding.UTF8.GetString(response);
 
                 Session["otp"] = value;
-
-
-
             }
-
-
-
             accountcreate ac = new accountcreate();
-            ac.verifyemail(common.email);
+            Signupform si = new Signupform();
+            si.parametersinsert(common.email);
 
-            Response.Redirect("Authenticate.aspx");
+            
+            Session["email"] = common.email;
+            Session["mobile"] = common.mobile;
+            Session["name"] = common.name;
+            Session["password"] = common.password;
+            Session["accountid"] = common.accointid;
 
-
+            
 
             
 
 
 
-
+            Response.Redirect("Authenticate.aspx");
         }
 
         protected void password_TextChanged(object sender, EventArgs e)

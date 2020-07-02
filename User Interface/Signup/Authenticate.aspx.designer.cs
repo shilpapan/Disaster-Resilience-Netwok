@@ -42,13 +42,13 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.TextBox aemail;
 
         /// <summary>
-        /// eauth control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button eauth;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// everified control.
@@ -78,13 +78,13 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.TextBox amobile;
 
         /// <summary>
-        /// mauth control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button mauth;
+        protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
         /// mverified control.
@@ -105,12 +105,12 @@ namespace DRSN.User_Interface.Signup
         protected global::System.Web.UI.WebControls.Label mnverified;
 
         /// <summary>
-        /// push control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button push;
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }
