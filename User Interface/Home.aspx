@@ -39,36 +39,17 @@
             
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="Home.html">Home</a></li>
+                    <li class="active"><a href="Home.aspx">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#explorer">Explorer</a></li>
-                    <!--<li class="drop-down">
-                        <a href="">Team</a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="drop-down">
-                                <a href="#">Deep Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>-->
                     <li><a href="#contact">Contact</a></li>
 
                 </ul>
             </nav><!-- .nav-menu -->
 
-            <a href="Login/Login.aspx" class="get-started-btn scrollto">Log in/ Sign up</a>
+            <a href="Login/Login.aspx" class="get-started-btn scrollto">Log in</a>
 
         </div>
     </header><!-- End Header -->
@@ -78,8 +59,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                    <h1>Better Solutions For Your Business</h1>
-                    <h2>We are team of talanted designers making websites with Bootstrap</h2>
+                    <h1>Better Solutions In Time Of Your Need</h1>
+                    <h2>We are a network that brings local authorities, individuals and organizations together.</h2>
                     <div class="d-lg-flex">
                         <a href="Signup/adduser.aspx" class="btn-get-started scrollto">Sign up for free</a>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
@@ -140,20 +121,23 @@
                 <div class="row content">
                     <div class="col-lg-6">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
+                            A software based management system for all government and non government organizations to collaborate together 
+                            in the time of disaster and help individuals out individuals, communities and societies in time of need securely 
+                            and safely.
+                            The system has three phases.
                         </p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+                            <li><i class="ri-check-double-line"></i> Early Warning Phase</li>
+                            <li><i class="ri-check-double-line"></i> Rescure Phase</li>
+                            <li><i class="ri-check-double-line"></i> Recovery Phase</li>
                         </ul>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0">
                         <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            This system will be designed by the use of blockchain technology. A blockchain solution enables the key 
+                            players/organizations during a disaster management situation to communicate effectively and act on time. 
+                            It allows the organizations to use their existing ecosystem to facilitate a service and publish on this network. 
+                            All transactions are recorded on the network.
                         </p>
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
@@ -170,37 +154,43 @@
                     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
                         <div class="content">
-                            <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+                            <h3>Why choose <strong>us?</strong></h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                                Disaster situations call for the absolute transparency that only a distributed network can provide. 
+                                All parties are equally entitled and can continue to use their own resource planning system. 
+                                The blockchain provides a single source of truth for all operations that is updated in real time. 
+                                Every party can access the transaction history. Parties can join or leave the network at any time. 
+                                Parties keep their data sovereignty and dont have to expose their resource capacities to other participants.
                             </p>
                         </div>
 
                         <div class="accordion-list">
                             <ul>
                                 <li>
-                                    <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> When can this application be used? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                     <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
                                         <p>
-                                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                            It can be used as a disaster resilience system that provides instant results in time of need.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li>
-                                    <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Who can use this system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                     <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
                                         <p>
-                                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                            1. Individuals
+                                            2. Local Authorities
+                                            3. Organisations
                                         </p>
                                     </div>
                                 </li>
 
                                 <li>
-                                    <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> How does this system work? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                     <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
                                         <p>
-                                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                            This system provides an enmergency system channel in time of need.
                                         </p>
                                     </div>
                                 </li>
@@ -224,37 +214,36 @@
                         <img src="assets/img/skills.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+                        <h3>Technologies used to build this system.</h3>
                         <p class="font-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
+                            This system made is a prototype and still needs some improvements.
                         </p>
 
                         <div class="skills-content">
 
                             <div class="progress">
-                                <span class="skill">HTML <i class="val">100%</i></span>
+                                <span class="skill">Blockchain Technology <i class="val">100%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
 
                             <div class="progress">
-                                <span class="skill">CSS <i class="val">90%</i></span>
+                                <span class="skill">ASP.NET <i class="val">90%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
 
                             <div class="progress">
-                                <span class="skill">JavaScript <i class="val">75%</i></span>
+                                <span class="skill"> CSS <i class="val">75%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
 
                             <div class="progress">
-                                <span class="skill">Photoshop <i class="val">55%</i></span>
+                                <span class="skill">Javascript <i class="val">55%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -273,41 +262,45 @@
 
                 <div class="section-title">
                     <h2>Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Establishing a shared system of record can advance disaster response, but will also have to address challenges such 
+                        as ownership of the system and data sovereignty of the parties involved. Information that recorded during disaster
+                        response phase will be used for recovery phase. To get to know the total damages and the amount of resources used, 
+                        blockchain will help to keep track of all the information stored in the blockchain. In addition to the above user 
+                        scenario, there are several other associated problems that occurs during and after the disaster took place, like 
+                        finding nearest relief center, outrage of disease may spread, interrupted power supply, uneven distribution of water 
+                        and food, finding missing people, statistical count of affected people and their damages, transportation problem, 
+                        issuing victim certificates for future welfare, fraudulent behavior to steal welfare of people etc. Blockchain has 
+                        the potential to solve all such problems effectively.
+
+                    </p>
                 </div>
 
                 <div class="row">
                     <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <h4><a href="">Module 1: Early Warning</a></h4>
+                            <p>It will provide a pre disaster report and send to all the users.</p>
                         </div>
                     </div>
 
                     <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="#">Sed ut perspici</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <h4><a href="#">Module 2: Rescue</a></h4>
+                            <p>This system will provide all the services one needs in the time of disaster</p>
                         </div>
                     </div>
 
                     <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="#">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <h4><a href="#">Module 3: Recovery</a></h4>
+                            <p>It will help in recovery post disaster</p>
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-layer"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -319,8 +312,8 @@
 
                 <div class="row">
                     <div class="col-lg-9 text-center text-lg-left">
-                        <h3>Call To Action</h3>
-                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Have any issues?</h3>
+                        <p> Connect with out customer service associate to solve your issue.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
                         <a class="cta-btn align-middle" href="#">Call To Action</a>
@@ -334,15 +327,23 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Ideation</h2>
+                    <p>Disaster Resilience System. The idea is to build a unique unified platform for all the stakeholders 
+                        (government and non government organizations) so that a better management of relief and security could be done 
+                        with accurate data and privacy. A natural disaster can never be avoided but can be predicted. 
+                        So, preparations to tackle situations while being hit by the disaster could be done if the correct information could 
+                        be reached to individuals. While being hit by the impact certain rescue operations are needed. Casualty count could 
+                        be avoided if rescue operations are held in the exact location of impact. In these times some individuals are not 
+                        reached due to loss of communication and many other unforeseen circumstances. This could be avoided if the rescue 
+                        could be done in accurate location. The idea to come up with such a network has been gathered by listing down the research and studies 
+                        made by various institutions throughout the globe.</p>
                 </div>
 
                 <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
                     <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-app">App</li>
-                    <li data-filter=".filter-card">Card</li>
-                    <li data-filter=".filter-web">Web</li>
+                    <li data-filter=".filter-app">Warning</li>
+                    <li data-filter=".filter-card">Rescue</li>
+                    <li data-filter=".filter-web">Recover</li>
                 </ul>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -350,8 +351,8 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
                         <div class="portfolio-info">
-                            <h4>App 1</h4>
-                            <p>App</p>
+                            <h4>Warning</h4>
+                            <p>Warning</p>
                             <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
@@ -360,8 +361,8 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
                         <div class="portfolio-info">
-                            <h4>Web 3</h4>
-                            <p>Web</p>
+                            <h4>Rescue</h4>
+                            <p>Rescue</p>
                             <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
@@ -370,74 +371,13 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
                         <div class="portfolio-info">
-                            <h4>App 2</h4>
-                            <p>App</p>
+                            <h4>Recover</h4>
+                            <p>Recover</p>
                             <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>Card 2</h4>
-                            <p>Card</p>
-                            <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>Web 2</h4>
-                            <p>Web</p>
-                            <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>App 3</h4>
-                            <p>App</p>
-                            <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>Card 1</h4>
-                            <p>Card</p>
-                            <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>Card 3</h4>
-                            <p>Card</p>
-                            <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-                        <div class="portfolio-info">
-                            <h4>Web 3</h4>
-                            <p>Web</p>
-                            <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
         </section><!-- End Portfolio Section -->
@@ -447,35 +387,18 @@
 
                 <div class="section-title">
                     <h2>Team</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>A team is required to manage the network.</p>
                 </div>
 
                 <div class="row">
 
-                    <div class="col-lg-6">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4 mt-lg-0">
+                   <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
                             <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                                <h4>Shilpa Pan</h4>
+                                <span>Developer</span>
+                                <p>Currently I am the only one in this team. Sorry! :P</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -486,39 +409,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -530,7 +421,7 @@
 
                 <div class="section-title">
                     <h2>Pricing</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>We can add prices to our services in future.</p>
                 </div>
 
                 <div class="row">

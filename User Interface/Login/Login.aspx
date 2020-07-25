@@ -45,26 +45,38 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						<%--<input class="input100" type="text" name="username" placeholder="Username">--%>
+						<asp:TextBox ID="TextBox2" runat="server" class="input100" type="text" name="username" placeholder="Username"></asp:TextBox>
+						<span class="focus-input100" data-placeholder="&#xf207;">
+                        
+                        </span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
+						<%--<input class="input100" type="password" name="pass" placeholder="Password">--%>
+                        <asp:TextBox ID="TextBox1" runat="server" class="input100" type="password" placeholder="Password" name="pass"></asp:TextBox>
 
+						<span class="focus-input100" data-placeholder="&#xf191;">
+                        </span>
+					</div>
+					<div>
+
+					    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Georgia" ForeColor="Red" Text="Label" 
+							Display="Dynamic"></asp:Label>
+
+					</div>
 					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"/>
 						<label class="label-checkbox100" for="ckb1">
 							Remember me
 						</label>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<%--<button class="login100-form-btn">
 							Login
-						</button>
+						</button>--%>
+					    <asp:Button ID="Button1" runat="server" Text="Log in"  class="login100-form-btn" OnClick="Button1_Click"/>
 					</div>
 
 					<div class="text-center p-t-90">

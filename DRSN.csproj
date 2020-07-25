@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -53,6 +56,9 @@
     </Reference>
     <Reference Include="Autofac.Integration.WebApi, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>packages\Autofac.WebApi2.4.1.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
@@ -93,6 +99,18 @@
     </Reference>
     <Reference Include="NBitcoin.Indexer, Version=3.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\NBitcoin.Indexer.3.0.0.5\lib\netstandard2.0\NBitcoin.Indexer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Hex, Version=3.8.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>packages\Nethereum.Hex.3.8.0\lib\net451\Nethereum.Hex.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Model, Version=3.8.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>packages\Nethereum.Model.3.8.0\lib\net451\Nethereum.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.RLP, Version=3.8.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>packages\Nethereum.RLP.3.8.0\lib\net451\Nethereum.RLP.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Util, Version=3.8.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>packages\Nethereum.Util.3.8.0\lib\net451\Nethereum.Util.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -334,7 +352,14 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="User Interface\Dashboard\Activity.aspx" />
+    <Content Include="User Interface\Dashboard\authenticatemodal.aspx" />
     <Content Include="User Interface\Dashboard\Dashboard.aspx" />
+    <Content Include="User Interface\Dashboard\Map.aspx" />
+    <Content Include="User Interface\Dashboard\News.aspx" />
+    <Content Include="User Interface\Dashboard\Requestservice.aspx" />
+    <Content Include="User Interface\Dashboard\Userprofile.aspx" />
+    <Content Include="User Interface\Dashboard\Verifyuser.aspx" />
     <Content Include="User Interface\Home.aspx" />
     <Content Include="User Interface\Login\Login.aspx" />
     <Content Include="User Interface\Signup\adduser.aspx" />
@@ -353,15 +378,73 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Application\accountcreate.cs" />
+    <Compile Include="Business Application\Block.cs" />
+    <Compile Include="Business Application\Blockchain.cs" />
+    <Compile Include="Business Application\startblockchain.cs" />
+    <Compile Include="Common\Blockdataset.cs" />
+    <Compile Include="Common\Completeprofile.cs" />
     <Compile Include="Common\Signup.cs" />
+    <Compile Include="Data Access\RSA.cs" />
+    <Compile Include="Data Access\RSACspDemo.cs" />
+    <Compile Include="Data Access\RsaFileDemo.cs" />
+    <Compile Include="Data Access\RsalnMemoryDemo.cs" />
     <Compile Include="Data Access\Signupform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Interface\Dashboard\Activity.aspx.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Activity.aspx.designer.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\authenticatemodal.aspx.cs">
+      <DependentUpon>authenticatemodal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\authenticatemodal.aspx.designer.cs">
+      <DependentUpon>authenticatemodal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User Interface\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User Interface\Dashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Requestservice.aspx.cs">
+      <DependentUpon>Requestservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Requestservice.aspx.designer.cs">
+      <DependentUpon>Requestservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Userprofile.aspx.cs">
+      <DependentUpon>Userprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Userprofile.aspx.designer.cs">
+      <DependentUpon>Userprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Verifyuser.aspx.cs">
+      <DependentUpon>Verifyuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Verifyuser.aspx.designer.cs">
+      <DependentUpon>Verifyuser.aspx</DependentUpon>
     </Compile>
     <Compile Include="User Interface\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

@@ -95,20 +95,20 @@ namespace DRSN.Common
             set { Mobilestatus = value; }
         }
 
-        public virtual void userdetails(string name,string email, string mobile, string password, string accointid, string publicaddress,
-            string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
-        {
-            this.Fullname = name;
-            this.Email = email;
-            this.Mobile = mobile;
-            this.Password = password;
-            this.Accountid = accointid;
-            this.Publicaddress = publicaddress;
-            this.Privateaddtess = privateaddress;
-            this.Emailverificationcode = emailverificationcode;
-            this.Emailstatus = emailstatus;
-            this.Mobilestatus = mobilestatus;
-        }
+        //public virtual void userdetails(string name,string email, string mobile, string password, string accointid, string publicaddress,
+        //    string privateaddress, string emailverificationcode, string mobileverificationcode, string emailstatus, string mobilestatus)
+        //{
+        //    this.Fullname = name;
+        //    this.Email = email;
+        //    this.Mobile = mobile;
+        //    this.Password = password;
+        //    this.Accountid = accointid;
+        //    this.Publicaddress = publicaddress;
+        //    this.Privateaddtess = privateaddress;
+        //    this.Emailverificationcode = emailverificationcode;
+        //    this.Emailstatus = emailstatus;
+        //    this.Mobilestatus = mobilestatus;
+        //}
     }
 
 }

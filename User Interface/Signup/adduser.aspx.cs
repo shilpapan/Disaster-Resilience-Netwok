@@ -14,7 +14,8 @@ using DRSN.Data_Access;
 
 namespace DRSN.User_Interface.Signup
 {
-    public partial class adduser : System.Web.UI.Page 
+    public partial class adduser : System.Web.UI.Page
+
     {
 
         Common.Signup sign = new Common.Signup();
