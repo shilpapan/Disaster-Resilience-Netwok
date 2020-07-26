@@ -352,11 +352,12 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="User Interface\Dashboard\Acceptrequest.aspx" />
     <Content Include="User Interface\Dashboard\Activity.aspx" />
-    <Content Include="User Interface\Dashboard\authenticatemodal.aspx" />
     <Content Include="User Interface\Dashboard\Dashboard.aspx" />
     <Content Include="User Interface\Dashboard\Map.aspx" />
     <Content Include="User Interface\Dashboard\News.aspx" />
+    <Content Include="User Interface\Dashboard\Requestcomplete.aspx" />
     <Content Include="User Interface\Dashboard\Requestservice.aspx" />
     <Content Include="User Interface\Dashboard\Userprofile.aspx" />
     <Content Include="User Interface\Dashboard\Verifyuser.aspx" />
@@ -390,19 +391,19 @@
     <Compile Include="Data Access\RsalnMemoryDemo.cs" />
     <Compile Include="Data Access\Signupform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Interface\Dashboard\Acceptrequest.aspx.cs">
+      <DependentUpon>Acceptrequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Acceptrequest.aspx.designer.cs">
+      <DependentUpon>Acceptrequest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User Interface\Dashboard\Activity.aspx.cs">
       <DependentUpon>Activity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User Interface\Dashboard\Activity.aspx.designer.cs">
       <DependentUpon>Activity.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User Interface\Dashboard\authenticatemodal.aspx.cs">
-      <DependentUpon>authenticatemodal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User Interface\Dashboard\authenticatemodal.aspx.designer.cs">
-      <DependentUpon>authenticatemodal.aspx</DependentUpon>
     </Compile>
     <Compile Include="User Interface\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -424,6 +425,13 @@
     </Compile>
     <Compile Include="User Interface\Dashboard\News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Requestcomplete.aspx.cs">
+      <DependentUpon>Requestcomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Requestcomplete.aspx.designer.cs">
+      <DependentUpon>Requestcomplete.aspx</DependentUpon>
     </Compile>
     <Compile Include="User Interface\Dashboard\Requestservice.aspx.cs">
       <DependentUpon>Requestservice.aspx</DependentUpon>

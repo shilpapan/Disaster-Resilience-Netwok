@@ -61,7 +61,7 @@
 					</div>
 					<div>
 
-					    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Georgia" ForeColor="Red" Text="Label" 
+					    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Georgia" ForeColor="Red" Text="" 
 							Display="Dynamic"></asp:Label>
 
 					</div>

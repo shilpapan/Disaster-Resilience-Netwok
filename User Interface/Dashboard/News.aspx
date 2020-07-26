@@ -64,7 +64,7 @@
         <div class="md-form">
           <i class="fas fa-pencil prefix grey-text"></i>
           <textarea type="text" id="form8" class="md-textarea form-control" rows="4" runat="server"></textarea>
-          <label data-error="wrong" data-success="right" for="form8Rescue and Relief measures </label>
+          <label data-error="wrong" data-success="right" for="form8">Rescue and Relief measures </label>
         </div>
 
 

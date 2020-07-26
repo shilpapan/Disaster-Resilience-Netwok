@@ -16,6 +16,127 @@ namespace DRSN.User_Interface.Dashboard
         SqlCommand com;
         SqlParameter accountid, emailstatus, mobilestatus, section;
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlcon = new SqlConnection(strConnString);
+
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcmd = new SqlCommand("totalreqmade", sqlcon);
+                sqlcmd.CommandType = System.Data.CommandType.StoredProcedure;
+                String acc = Session["accountid"].ToString();
+                sqlcmd.Parameters.AddWithValue("@accountid", acc);
+                int count = (int)sqlcmd.ExecuteScalar();
+                Label1.Text = "Overall " +count + " requests made";
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            sqlcon.Close();
+            
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlcon = new SqlConnection(strConnString);
+
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcmd = new SqlCommand("totalreqacc", sqlcon);
+                sqlcmd.CommandType = System.Data.CommandType.StoredProcedure;
+                String acc = Session["accountid"].ToString();
+                sqlcmd.Parameters.AddWithValue("@accountid", acc);
+                int count = (int)sqlcmd.ExecuteScalar();
+                Label2.Text = "Overall " + count + " tasks assigned";
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            sqlcon.Close();
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlcon = new SqlConnection(strConnString);
+
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcmd = new SqlCommand("totalreqcomp", sqlcon);
+                sqlcmd.CommandType = System.Data.CommandType.StoredProcedure;
+                String acc = Session["accountid"].ToString();
+                sqlcmd.Parameters.AddWithValue("@accountid", acc);
+                int count = (int)sqlcmd.ExecuteScalar();
+                Label3.Text = "Overall " + count + " tasks completed";
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            sqlcon.Close();
+
+        
+    }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            SqlConnection sqlcon = new SqlConnection(strConnString);
+
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcmd = new SqlCommand("assigned", sqlcon);
+                sqlcmd.CommandType = System.Data.CommandType.StoredProcedure;
+                String acc = Session["accountid"].ToString();
+                sqlcmd.Parameters.AddWithValue("@accountid", acc);
+                sqlcmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlcmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                GridView2.DataSource = dt;
+                GridView2.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            sqlcon.Close();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlcon = new SqlConnection(strConnString);
+
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcmd = new SqlCommand("displayunack", sqlcon);
+                sqlcmd.CommandType = System.Data.CommandType.StoredProcedure;
+                
+                sqlcmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlcmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            sqlcon.Close();
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             accountid = new SqlParameter();
@@ -66,6 +187,14 @@ namespace DRSN.User_Interface.Dashboard
             }
 
             con.Close();
+
+
+            Button1_Click(null, null);
+            Button2_Click1(null, null);
+            Button3_Click(null, null);
+            Button4_Click(null, null);
+            Button5_Click(null, null);
+            
         }
     }
 }
