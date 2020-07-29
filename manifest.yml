@@ -1,4 +1,6 @@
- applications:
- - name: DRSN
-   random-route: true
-   memory: 128M
+---
+applications:
+- name: DRSN
+  memory: 128M
+  stack: windows2016
+  buildpack: hwc_buildpack

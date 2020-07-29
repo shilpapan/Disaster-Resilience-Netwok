@@ -145,8 +145,8 @@ namespace DRSN.Common
                 sqlcmd.Parameters.AddWithValue("@Hash", block.Hash);
                 sqlcmd.Parameters.AddWithValue("@Data", block.Data);
                 sqlcmd.Parameters.AddWithValue("@Nonce", block.Nonce);
-                sqlcmd.Parameters.AddWithValue("@Sender", "Barry");
-                sqlcmd.Parameters.AddWithValue("@Receiver", "Oliver");
+                sqlcmd.Parameters.AddWithValue("@Sender", "Null");
+                sqlcmd.Parameters.AddWithValue("@Receiver", "Null");
                 sqlcmd.Parameters.AddWithValue("@Difficulty", "NA");
                 sqlcmd.Parameters.AddWithValue("@Isvalid", "NA");
                 sqlcmd.Parameters.AddWithValue("@Duration", "NA");

@@ -24,67 +24,50 @@
     <form id="form1" runat="server">
         <div>
             <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+            <div class="logo"><a href="Dashboard.aspx" class="simple-text logo-normal">
+          DRSN
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="./dashboard.html">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="Dashboard.aspx">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="Profile.aspx">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+            <a class="nav-link" href="Youractivity.aspx">
+              <i class="material-icons">Activity</i>
+              <p>Activity</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+            <a class="nav-link" href="News.aspx">
               <i class="material-icons">library_books</i>
-              <p>Typography</p>
+              <p>Update a News</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="Map.aspx">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+            <a class="nav-link" href="Notification.aspx">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
-            </a>
-          </li>
           <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
+            <a class="nav-link" href="Dashboard.aspx">
               <i class="material-icons">unarchive</i>
               <p>Upgrade to PRO</p>
             </a>
@@ -97,7 +80,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Map</a>
+            <a class="navbar-brand" href="javascript:;">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -231,6 +214,8 @@
     </div>
   </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                        
     </form>
     <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>

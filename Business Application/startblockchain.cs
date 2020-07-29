@@ -8,12 +8,12 @@ namespace DRSN.Business_Application
 {
     public class startblockchain
     {
-        public void startb()
+        public void startb(string dataforblock)
         {
             Blockdataset bd = new Blockdataset();
             var startTime = DateTime.Now;
             Blockchain phillyCoin = new Blockchain();
-            phillyCoin.AddBlock(new Block(DateTime.Now, bd.prevhash, "My sixth block"));
+            phillyCoin.AddBlock(new Block(DateTime.Now, bd.prevhash, dataforblock));
             var endTime = DateTime.Now;
             bd.duration = (endTime - startTime).ToString();
 

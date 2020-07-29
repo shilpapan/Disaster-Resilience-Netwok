@@ -36,13 +36,13 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="Userprofile.aspx">
+            <a class="nav-link" href="Profile.aspx">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="Activity.aspx">
+            <a class="nav-link" href="Youractivity.aspx">
               <i class="material-icons">Activity</i>
               <p>Activity</p>
             </a>
@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="notifications.html">
+            <a class="nav-link" href="Notification.aspx">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
@@ -288,11 +288,12 @@
                     
                 </div>
                 <div class="card-body table-responsive">
+                    <div class="tab-pane active" id="profile1">
                   <table class="table table-hover">
                       <asp:GridView ID="GridView1" runat="server" Width="100%" CssClass="table table-striped table-bordered table-hover"></asp:GridView>
                     </table>
                     <a href="Acceptrequest.aspx" style="font-family:Georgia;color:rebeccapurple;"><b>Accept an request</b></a>
-                </div>
+                </div></div>
               </div>
             </div>
           </div>

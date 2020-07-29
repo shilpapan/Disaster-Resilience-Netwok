@@ -18,6 +18,9 @@ namespace DRSN.User_Interface.Dashboard
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            String dataforblock = String.Empty;
+            String combinedata = "00200";
+
             string strConnString = ConfigurationManager.ConnectionStrings["DRSNdatabase"].ConnectionString;
             SqlConnection sqlcon = new SqlConnection(strConnString);
 
@@ -30,7 +33,9 @@ namespace DRSN.User_Interface.Dashboard
                 sqlcmd.Parameters.AddWithValue("@accountid", acc);
                 sqlcmd.Parameters.AddWithValue("@requestid", TextBox1.Text);
                 sqlcmd.ExecuteNonQuery();
-                
+
+
+                dataforblock = acc + combinedata + TextBox1.Text + "Accepting a request";
 
             }
             catch (Exception ex)
@@ -38,6 +43,11 @@ namespace DRSN.User_Interface.Dashboard
                 Console.WriteLine(ex.Message);
             }
             sqlcon.Close();
+
+            Business_Application.startblockchain sb = new Business_Application.startblockchain();
+            sb.startb(dataforblock);
+
+
             Response.Redirect("Dashboard.aspx");
         }
     }

@@ -19,6 +19,8 @@ namespace DRSN.User_Interface.Dashboard
 
         protected void Button4_Click1(object sender, EventArgs e)
         {
+            String dataforblock = String.Empty;
+            String combinedata = "00200";
             String connection = ConfigurationManager.ConnectionStrings["DRSNdatabase"].ConnectionString;
             SqlConnection sqlcon = new SqlConnection(connection);
 
@@ -38,12 +40,22 @@ namespace DRSN.User_Interface.Dashboard
 
 
                 sqlcmd.ExecuteNonQuery();
+
+                dataforblock = acc + combinedata + form34.Value + combinedata + form29.Value + combinedata +
+                    form32.Value + combinedata + form8.Value + "News";
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
             sqlcon.Close();
+
+            
+
+            Business_Application.startblockchain sb = new Business_Application.startblockchain();
+            sb.startb(dataforblock);
+
+            
 
             Response.Redirect("Dashboard.aspx");
         }

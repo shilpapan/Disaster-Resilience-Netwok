@@ -252,6 +252,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <EmbeddedResource Include="DRSN.sql" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -353,14 +354,15 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="User Interface\Dashboard\Acceptrequest.aspx" />
-    <Content Include="User Interface\Dashboard\Activity.aspx" />
     <Content Include="User Interface\Dashboard\Dashboard.aspx" />
     <Content Include="User Interface\Dashboard\Map.aspx" />
     <Content Include="User Interface\Dashboard\News.aspx" />
+    <Content Include="User Interface\Dashboard\Notification.aspx" />
+    <Content Include="User Interface\Dashboard\Profile.aspx" />
     <Content Include="User Interface\Dashboard\Requestcomplete.aspx" />
     <Content Include="User Interface\Dashboard\Requestservice.aspx" />
-    <Content Include="User Interface\Dashboard\Userprofile.aspx" />
     <Content Include="User Interface\Dashboard\Verifyuser.aspx" />
+    <Content Include="User Interface\Dashboard\Youractivity.aspx" />
     <Content Include="User Interface\Home.aspx" />
     <Content Include="User Interface\Login\Login.aspx" />
     <Content Include="User Interface\Signup\adduser.aspx" />
@@ -398,13 +400,6 @@
     <Compile Include="User Interface\Dashboard\Acceptrequest.aspx.designer.cs">
       <DependentUpon>Acceptrequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User Interface\Dashboard\Activity.aspx.cs">
-      <DependentUpon>Activity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User Interface\Dashboard\Activity.aspx.designer.cs">
-      <DependentUpon>Activity.aspx</DependentUpon>
-    </Compile>
     <Compile Include="User Interface\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,6 +421,20 @@
     <Compile Include="User Interface\Dashboard\News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User Interface\Dashboard\Notification.aspx.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Notification.aspx.designer.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User Interface\Dashboard\Requestcomplete.aspx.cs">
       <DependentUpon>Requestcomplete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,19 +449,19 @@
     <Compile Include="User Interface\Dashboard\Requestservice.aspx.designer.cs">
       <DependentUpon>Requestservice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User Interface\Dashboard\Userprofile.aspx.cs">
-      <DependentUpon>Userprofile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User Interface\Dashboard\Userprofile.aspx.designer.cs">
-      <DependentUpon>Userprofile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="User Interface\Dashboard\Verifyuser.aspx.cs">
       <DependentUpon>Verifyuser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User Interface\Dashboard\Verifyuser.aspx.designer.cs">
       <DependentUpon>Verifyuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Youractivity.aspx.cs">
+      <DependentUpon>Youractivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Interface\Dashboard\Youractivity.aspx.designer.cs">
+      <DependentUpon>Youractivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="User Interface\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -500,7 +509,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
