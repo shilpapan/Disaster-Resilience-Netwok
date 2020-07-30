@@ -32,7 +32,7 @@ namespace DRSN.Business_Application
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential("shilpapan0301@gmail.com", "xxx9ll45chv321!");
+            smtp.Credentials = new System.Net.NetworkCredential("your email", "your password");
             smtp.EnableSsl = true;
             MailMessage msg = new MailMessage();
             msg.Subject = "Authenticate your email with DRSN";
@@ -40,7 +40,7 @@ namespace DRSN.Business_Application
                  "\n\n\nRegards\nDRSN Team";
             string toaddress = email;
             msg.To.Add(toaddress);
-            string fromaddress = "DRSN Team <shilpapan0301@gmail.com>";
+            string fromaddress = "DRSN Team <your email>";//put in your email
             msg.From = new MailAddress(fromaddress);
             try
             {

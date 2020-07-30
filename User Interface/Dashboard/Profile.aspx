@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="Userprofile.aspx">
+            <a class="nav-link" href="Profile.aspx">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
@@ -224,14 +224,11 @@
                         <div class="form-group">
                           <label>About Me</label>
                           <div class="form-group">
-                              <textarea class="form-control" rows="5" id ="aboutme" runat="server"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                              <textarea class="form-control" rows="2" id ="aboutme" runat="server"></textarea>
                       <asp:Button ID="Button1" runat="server" Text="Update Profile" CssClass="btn btn-primary pull-right" OnClick="Button1_Click" />
                       <div class="clearfix"></div>
-                  
+                          </div></div></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,7 +241,7 @@
                 </div>
                 <div class="card-body">
                   <h6 class="card-category text-gray">Homo Sapiens</h6>
-                  <h4 class="card-title"><input id="fullname1" runat="server" class="form-control"/></h4>
+                  <h4 class="card-title"><input id="fullname1" runat="server" class="form-control" disabled/></h4>
                   <p class="card-description">
                   <%--<input id="aboutme1" runat="server" />  --%> Just another individual
                   </p>

@@ -40,7 +40,7 @@ namespace DRSN.User_Interface.Signup
             Random random = new Random();
             int value = random.Next(100001, 999999);
             string destinationaddr = "91" + common.mobile;
-            string message = "Your OTP Number is " + value + " ( Sent By : DRSN Team )";
+            string message = "Your OTP Number is " + value + ". " + NewGUID +" ( Sent By : DRSN Team )";
             
             String message1 = HttpUtility.UrlEncode(message);
 
@@ -48,7 +48,7 @@ namespace DRSN.User_Interface.Signup
             {
                 byte[] response = wb.UploadValues("https://api.textlocal.in/send/", new NameValueCollection()
                 {
-                {"apikey" , "q0fLh6VFYeg-pJBpgv9zMwv7C5vJTuJ4Co2TROeAYY"},
+                {"apikey" , "your key"}, //your textlocal api key
                 {"numbers" , destinationaddr},
                 {"message" , message1},
                 {"sender" , "TXTLCL"}
