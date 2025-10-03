@@ -8,9 +8,4 @@ Requirements
 2.You have to update you email id and password to use the mobile authentication feature.
 
 
-Links to support this project: 
-
-A demo on how this software wors is here: https://www.youtube.com/watch?v=fuPu8g8MpHQ 
-
-3 minute short video on understanding the project: https://www.youtube.com/watch?v=wmNjVIVWbL0
 
